@@ -1,0 +1,658 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Faculty Project</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />{
+<!-- Font Awesome icons (free version)-->
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css" />
+<link
+	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+	rel="stylesheet" type="text/css" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="{% static 'css/index-styles.css' %}" rel="stylesheet" />
+
+<style>
+
+
+
+
+
+.t1 table{
+	margin-top: 10px;
+	padding-top: 30px;
+  border: 3px outset black;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+  background-color: #6d52a5;
+}
+.t1 th{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #fd7838;
+	border: 3px outset black;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+  background-color: rgb(138, 118, 172);
+}
+.t1 td{
+	border: 3px outset black;
+  padding-top: 10px;
+  color: darkslateblue;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+  	background-color: #baafd1;
+}
+.t3 table{
+	margin-top: 10px;
+	padding-top: 30px;
+  border: 3px outset black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.t3 th{
+	background-color: rgb(138, 118, 172);
+	margin-top: 10px;
+	padding-top: 30px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: #fd7838;
+  border: 3px outset black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.t3 td{
+	background-color: #baafd1;
+	margin-top: 10px;
+	padding-top: 30px;
+	color: darkslateblue;
+  border: 3px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mk{
+	padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+
+	  /* body css for whole page */
+	  body
+    {
+	    margin:0px;
+	    background-color:#f26724;
+	    background-image:url(image/background.jpg);
+	    color:#f9fcf5;
+	    font-family:Arial, Helvetica, sans-serif;
+    }
+    
+    #main{width:600px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+    border-radius:5px; padding-left:10px; margin-top:100px; border-top:3px double #f1f1f1; 
+    border-bottom:3px double #f1f1f1; padding-top:20px;
+    }
+    
+    #main table{font-family:"Comic Sans MS", cursive;}
+    /* css code for textbox */
+    #main .tb{height:28px; width:230px; border:1px solid #f26724; color:#fd7838; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;}
+    
+    #main .tb:focus{height:28px; border:1px solid #f26724; outline:none; border-left:5px solid #f7f7f7;}
+
+    /* css code for button*/
+    #main .btn{width:150px; height:32px; outline:none;  color:#f7f7f7; font-weight:bold; border:0px solid #f26724; 
+    text-shadow: 0px 0.5px 0.5px #fff; border-radius: 2px; font-weight: 600; color: #f26724; letter-spacing: 1px; 
+    font-size:14px; background-color:#f1f1f1; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+  
+    #main .btn:hover{
+	background-color:#f26724; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+    -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; 
+	}
+</style>
+
+
+
+
+
+
+
+
+</head>
+<body id="page-top" style="background-color: powderblue;">
+	<!-- Navigation-->
+	<nav
+		class="navbar navbar-expand-lg bg-primary text-uppercase fixed-top"
+		id="mainNav">
+		<div class="container">
+			<!-- <a class="navbar-brand" href="#page-top">ANALYSIS</a>  -->
+			<button
+				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+				type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				Menu <i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive" style="background-color: rgb(104, 190, 224);">
+				<ul class="navbar-nav ms-auto">
+
+					<!-- <li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#addstudent">Add
+							Student</a></li>
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#addfaculty">Add
+							Faculty</a></li> -->
+
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#sfr">Student-Faculty
+							Ratio</a></li>
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Faculty
+							Cadre proportion</a></li>
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#qualification">Faculty
+							Qualification</a></li>
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="#retention">Faculty
+							Retention</a></li>
+					<li class="nav-item mx-0 mx-lg-1"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="/">Logout</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	
+
+
+
+
+
+
+
+
+
+
+	<!-- student faculty-->
+	<div class="text-black text-center" id="sfr">
+		<div class="container d-flex align-items-center flex-column " style="padding-top:110px">
+
+			<!-- Masthead Heading-->
+			
+            <h2
+				class="page-section-heading text-center text-uppercase text-white">STUDENT FACULTY RATIO</h2>
+			<!-- Icon Divider-->
+			
+			
+			<div class="row" style="font-size:x-large;" >
+				
+					<table class="t1">
+						<tr>
+							<th></th>
+							<th>2021-2022</th>
+							<th>2020-2021</th>
+							<th>2019-2020</th>
+						</tr>
+						
+					
+					
+					<tr>
+						<th>UG-4</th>
+						<td>{{m4}}</td>
+						<td>20</td>
+						<td>30</td>
+					</tr>
+					<tr>
+						<th>UG-3</th>
+						<td>{{m3}}</td>
+						<td>{{m4}}</td>
+						<td>20</td>
+					</tr>
+					<tr>
+						<th>UG-2</th>
+						<td>{{m2}}</td>
+						<td>{{m3}}</td>
+						<td>{{m4}}</td>
+					</tr>
+					<tr>
+						<th>UG-1</th>
+						<td>{{m1}}</td>
+						<td>{{m2}}</td>
+						<td>{{m3}}</td>
+					</tr>
+					<tr>
+						<th>Total students</th>
+						<td>{{ynow}}</td>
+						<td>{{ybef}}</td>
+						<td>{{yfirst}}</td>
+					</tr>
+					<tr>
+						<th>Faculty</th>
+						<td>{{f1}}</td>
+						<td>{{f2}}</td>
+						<td>{{f3}}</td>
+					</tr>
+					<tr>
+						<th>SFR</th>
+						<td>{{c1}}</td>
+						<td>{{c2}}</td>
+						<td>{{c3}}</td>
+					</tr>
+				</table>
+				
+				<!-- <%
+				
+				
+				
+				Connection con=null;
+				try {
+					int stcount=0,ftcount=0;
+					Class.forName("com.mysql.cj.jdbc.Driver");
+					 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jaya?useSSL=false","root","admin");
+					 for(int i=1;i<=4;i++){
+					PreparedStatement pst=con.prepareStatement("select * from students where syear=?");
+					String syear=Integer.toString(i);
+					pst.setString(1, syear);
+					ResultSet rs=pst.executeQuery();
+					
+					int count=0;
+					while(rs.next())
+					{
+						  count++;
+                          
+					}
+					//else
+	//				{
+//						request.setAttribute("status", "failed");
+//						dispatcher=request.getRequestDispatcher("login.jsp");
+	//					out.print("Sorry");
+//					}
+					out.println("No of students in "+i+" year= "+count);
+					stcount+=count;
+					
+					 }//end of for loop
+					 
+					 
+					 
+					 
+					 		for(int i=1;i<=4;i++){
+							PreparedStatement pst=con.prepareStatement("select * from faculty where syear=?");
+							String syear=Integer.toString(i);
+							pst.setString(1, syear);
+							ResultSet rs=pst.executeQuery();
+							
+							int count=0;
+							while(rs.next())
+							{
+								  count++;
+		                          
+							}
+							//else
+			//				{
+//								request.setAttribute("status", "failed");
+//								dispatcher=request.getRequestDispatcher("login.jsp");
+			//					out.print("Sorry");
+//							}
+							out.println("No of faculty in "+i+" year= "+count);
+							ftcount+=count;
+							
+							 }//end of for loop
+					 		out.println("STUDENT FACULTY RATIO="+(stcount/ftcount));
+					 
+					
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+				
+				%> -->
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Faculty Cadre-->
+	<section class="page-section bg-primary text-white" id="about">
+		<div class="container">
+			<!-- About Section Heading-->
+			<h2
+				class="page-section-heading text-center text-uppercase text-white">FacultyCadre proportion</h2>
+			<!-- Icon Divider-->
+			
+			<!-- About Section Content-->
+			
+				<!-- <%
+				
+				
+				
+				Connection con2=null;
+				try {
+					int stcount=0,ftcount=0;
+					Class.forName("com.mysql.cj.jdbc.Driver");
+					 con2=DriverManager.getConnection("jdbc:mysql://localhost:3306/jaya?useSSL=false","root","admin");
+					 for(int i=1;i<=4;i++){
+					PreparedStatement pst=con2.prepareStatement("select * from students where syear=?");
+					String syear=Integer.toString(i);
+					pst.setString(1, syear);
+					ResultSet rs=pst.executeQuery();
+					
+					int count=0;
+					while(rs.next())
+					{
+						  count++;
+                          
+					}
+					//else
+	//				{
+//						request.setAttribute("status", "failed");
+//						dispatcher=request.getRequestDispatcher("login.jsp");
+	//					out.print("Sorry");
+//					}
+					out.println("No of students in "+i+" year= "+count);
+					stcount+=count;
+					
+					 }//end of for loop
+					 
+					 
+					 
+					 
+					 		for(int i=1;i<=4;i++){
+							PreparedStatement pst=con.prepareStatement("select * from faculty where syear=?");
+							String syear=Integer.toString(i);
+							pst.setString(1, syear);
+							ResultSet rs=pst.executeQuery();
+							
+							int count=0;
+							while(rs.next())
+							{
+								  count++;
+		                          
+							}
+							//else
+			//				{
+//								request.setAttribute("status", "failed");
+//								dispatcher=request.getRequestDispatcher("login.jsp");
+			//					out.print("Sorry");
+//							}
+							out.println("No of faculty in "+i+" year= "+count);
+							ftcount+=count;
+							
+							 }//end of for loop
+					 		out.println("STUDENT FACULTY RATIO="+(stcount/ftcount));
+					 
+					
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+				
+				
+				%> -->
+
+				<div class="row" style="font-size:large;" >
+				
+					<table class="t3">
+						<tr>
+							<th rowspan="2">YEARS</th>
+							<th colspan="2">Professors</th>
+							<th colspan="2">Associate Professors</th>
+							<th colspan="2">Assistant professors</th>
+							<th colspan="2">Total Faculty</th>
+							
+						</tr>
+						<tr>
+							
+							
+							<th >Available</th>
+							<th >Required</th>
+							<th >Available</th>
+							<th >Required</th>
+							<th >Available</th>
+							<th >Required</th>
+							<th >Available</th>
+							<th >Required</th>
+							
+							
+						</tr>
+					
+					
+					<tr>
+						<th>2021-22</th>
+						<td>{{u11}}</td>
+						<td>{{y}}</td>
+						<td>{{u21}}</td>
+						<td>{{y}}</td>
+						<td>{{u31}}</td>
+						<td>{{z}}</td>
+						<td>{{s1}}</td>
+						<td>26</td>
+					</tr>
+					<tr>
+						<th>2020-21</th>
+						<td>{{u12}}</td>
+						<td>{{y}}</td>
+						<td>{{u22}}</td>
+						<td>{{y}}</td>
+						<td>{{u32}}</td>
+						<td>{{z}}</td>
+						<td>{{s2}}</td>
+						<td>26</td>
+					</tr>
+					<tr>
+						<th>2019-20</th>
+						<td>{{u13}}</td>
+						<td>{{y}}</td>
+						<td>{{u23}}</td>
+						<td>{{y}}</td>
+						<td>{{u33}}</td>
+						<td>{{z}}</td>
+						<td>{{s3}}</td>
+						<td>26</td>
+					</tr>
+					<tr>
+						<th>AVERAGE NUMBERS</th>
+						<td>{{t1}}</td>
+						<td>{{y}}</td>
+						<td>{{t2}}</td>
+						<td>{{y}}</td>
+						<td>{{t3}}</td>
+						<td>{{z}}</td>
+						<td>{{tt}}</td>
+						<td>26</td>
+					</tr>
+					
+					
+					
+						
+				</table>
+		</div>
+	</section>
+
+
+	<!-- Faculty Qualification-->
+	<section class="page-section bg-primary text-white "
+		id="qualification">
+		<div class="container">
+			<!-- About Section Heading-->
+			<h2
+				class="page-section-heading text-center text-uppercase text-white">Faculty Qualification</h2>
+			<!-- Icon Divider-->
+			<!-- <div class="divider-custom divider-light">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon">
+					<i class="fas fa-star"></i>
+				</div>
+				<div class="divider-custom-line"></div> -->
+			</div>
+			<!-- About Section Content-->
+			<div class="row" style="font-size:x-large;" >
+				
+				<table class="t1">
+					<tr>
+						<th>YEARS</th>
+						<th>PhD(X)</th>
+						<th>MTECH(Y)</th>
+						<th>Faculty(1:20)(F)</th>
+						<th>FQ( 2.0 x [(10X +4Y)/F)])</th>
+						
+					</tr>
+					
+				
+				
+				<tr>
+					<th>2021-22</th>
+					<td>{{u11}}</td>
+					<td>{{u21}}</td>
+					<td>{{yo}}</td>
+					<td>{{f1}}</td>
+				</tr>
+				<tr>
+					<th>2020-21</th>
+					<td>{{u12}}</td>
+					<td>{{u22}}</td>
+					<td>{{yo}}</td>
+					<td>{{f2}}</td>
+				</tr>
+				<tr>
+					<th>2019-20</th>
+					<td>{{u13}}</td>
+					<td>{{u23}}</td>
+					<td>{{yo}}</td>
+					<td>{{f3}}</td>
+				</tr>
+				
+				<tr>
+					<th colspan="4">Average Assessment</th>
+					<td>{{ft}}</td>
+					
+				</tr>
+				<tr>
+					
+			</table>
+	</div>
+		</div>
+	</section>
+
+
+
+
+
+
+	<!-- Faculty Retention-->
+	<section class="page-section" id="retention">
+		<div class="container">
+			<!-- Contact Section Heading-->
+			<h2
+				class="page-section-heading text-center text-uppercase text-secondary">Faculty
+				Retention</h2>
+			<!-- Icon Divider-->
+			<!-- <div class="divider-custom">
+				<div class="divider-custom-line"></div>
+				<div class="divider-custom-icon">
+					<i class="fas fa-star"></i>
+				</div>
+				<div class="divider-custom-line"></div>
+			</div> -->
+			<!-- Contact Section Form
+			<div class="row justify-content-center">
+				<div class="col-lg-8 col-xl-7">
+
+					<form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        {%csrf_token%}
+					
+				</div>
+			</div>-->
+
+			<div class="row" style="font-size:x-large;" >
+				
+				<table class="t1">
+					<tr>
+						<th>Description</th>
+						
+						<th>2019-20</th>
+						<th>2020-21</th>
+						<th>2021-22</th>
+						
+						
+					</tr>
+					
+				
+				
+				<tr>
+					<th>No of Faculty Retained</th>
+					<td>{{f3}}</td>
+					<td>{{f2}}</td>
+					<td>{{f1}}</td>
+					
+				</tr>
+				<tr>
+					<th>Faculty Required</th>
+					<td>{{yo}}</td>
+					<td>{{yo}}</td>
+					<td>{{yo}}</td>
+					
+				</tr>
+				<tr>
+					<th>% of Faculty Retained</th>
+					<td>{{per3}}</td>
+					<td>{{per2}}</td>
+					<td>{{per1}}</td>
+					
+				</tr>
+				
+				
+				<tr>
+					
+			</table>
+
+
+
+
+
+
+
+
+		</div>
+	</section>
+	
+
+
+
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="{% static 'js/scripts.js' %}"></script>
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<!-- * *                               SB Forms JS                               * *-->
+	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+	
+</body>
+</html>
